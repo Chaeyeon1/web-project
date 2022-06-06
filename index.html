@@ -58,7 +58,7 @@
       .about {
         color: black;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 35px;
         text-align: center;
       }
       .pic {
@@ -66,8 +66,10 @@
         margin-left: 30px;
         margin-top: 30px;
         width: 250px;
-        height: 350px;
-        background-color: white;
+        height: 380px;
+        background-color: #a6a2a2;
+        border-radius: 20px;
+        border: 2px solid rgb(129, 117, 101);
       }
 
       .pic_pororo {
@@ -79,7 +81,8 @@
         margin-left: 60px;
         font-weight: bold;
         margin-top: 30px;
-        color: #454343;
+        /* color: #454343; */
+        /* color: white; */
       }
       div span div {
         width: 150px;
@@ -90,19 +93,32 @@
       }
       .all {
         display: flex;
-        justify-content: space-around;
-        /* width: 700px; */
-        width: 100%;
+        justify-content: center;
+        display: center;
+        /* justify-content: space-evenly; */
       }
       .education {
-        width: 150px;
+        margin-left: 20px;
+        width: 250px;
         height: 100px;
         margin-top: 30px;
+        padding: 1px;
+        background-color: #a6a2a2;
+        border-radius: 20px;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid rgb(129, 117, 101);
       }
 
-      div div p {
+      .title {
+        color: rgb(237, 237, 237);
         font-weight: bold;
         font-size: 18px;
+      }
+
+      .content,
+      a {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -141,37 +157,37 @@
         <img class="pic_pororo" src="Pororo.jpg" width="100" height="100" />
         <span class="name">Shin Chae Yeon</span>
         <span class="des">
-          <div class="phone">전화 : 010-1234-5678</div>
-          <div class="email">이메일 : ha@naver.com</div>
-          <div class="school">학교 : 부경대학교</div>
+          <div class="content">전화 : 010-1234-5678</div>
+          <div class="content">이메일 : ha@naver.com</div>
+          <div class="content">학교 : 부경대학교</div>
         </span>
       </div>
       <div class="one_block">
         <div class="education">
-          <p>전공</p>
-          컴퓨터공학
+          <p class="title">전공</p>
+          <p class="content">컴퓨터공학</p>
         </div>
         <div class="education">
-          <p>취미</p>
-          야구 관람
+          <p class="title">취미</p>
+          <p class="content">야구관람</p>
         </div>
         <div class="education">
-          <p>블로그 링크</p>
+          <p class="title">블로그 링크</p>
           <a href="https://blog.naver.com/">Chaeyeon's blog</a>
         </div>
       </div>
       <div class="two_block">
         <div class="education">
-          <p>관심있는 분야</p>
-          프론트엔드
+          <p class="title">관심있는 분야</p>
+          <p class="content">프론트엔드</p>
         </div>
         <div class="education">
-          <p>사는 곳</p>
-          부산
+          <p class="title">사는 곳</p>
+          <p class="content">부산</p>
         </div>
         <div class="education">
-          <p>인스타 아이디</p>
-          chaeyeon_
+          <p class="title">인스타 아이디</p>
+          <p class="content">chaeyeon_</p>
         </div>
       </div>
     </div>
