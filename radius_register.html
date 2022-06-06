@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --main-color: #5567ff;
+        --error-color: #e74c3c;
+        --gray-border: #e1e2e3;
+        background-color: #c6e2ff;
+      }
+      .container {
+        width: 375px;
+        background-color: white;
+        border-radius: 30px;
+        margin: 200px auto;
+      }
+      .form_control input {
+        width: 90%;
+        height: 40px;
+        padding: 0px 10px;
+        display: block;
+        border: 0;
+        border-bottom: 1px solid var(--gray-border);
+      }
+      .register {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .form_control {
+        width: 270px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="submit.html"
+        class="form_control"
+        id="form_control"
+        onsubmit="return checkPasswordMatch(password, repassword)"
+      >
+        <br />
+        <div class="register">REGISTER</div>
+        <input type="text" placeholder="ID" id="username" /><br />
+        <input type="text" placeholder="E-MAIL" id="E-mail" /><br />
+        <input type="password" placeholder="PASSWORD" id="password" /><br />
+        <input type="password" placeholder="REPASSWORD" id="repassword" /><br />
+        <input
+          type="submit"
+          value="submit"
+          name="submit"
+          style="border-radius: 10px; background-color: #a0a0ff; color: white"
+        /><br />
+      </form>
+    </div>
+
+    <script>
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      const repassword = document.getElementById("repassword");
+
+      function checkPasswordMatch(input1, input2) {
+        if (input1.value != input2.value) {
+          alert("Passwords do not match");
+
+          document.getElementById("form_control").reset();
+          document.getElementById("username").focus();
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

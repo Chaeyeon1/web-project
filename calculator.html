@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+  </head>
+  <body>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;미니계산기
+    <table border="1">
+      <tr>
+        <td colspan="1">숫자1</td>
+        <td>
+          <input type="text" name="f1" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1">숫자2</td>
+        <td>
+          <input type="text" name="f2" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" onclick="ch('+')" value="+" />
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" onclick="ch('-')" value="-" />
+        </td>
+      </tr>
+      <tr>
+        <td>결과</td>
+        <td colspan="4">
+          <input type="text" name="f3" />
+        </td>
+      </tr>
+    </table>
+    <script>
+      function ch(x) {
+        let n1, n2, n3;
+
+        n1 = document.getElementsByName("f1")[0].value; // f1의 값을 받아오기 (첫번째 숫자 1)
+        n1 = parseInt(n1); // int값으로 변경
+        n2 = document.getElementsByName("f2")[0].value; // f2의 값을 받아오기 (두 번째 숫자 2)
+        n2 = parseInt(n2);
+
+        if (x == "+") {
+          // 만약에 x의 값이 +라면?
+          n3 = n1 + n2; // n1과 n2를 더하고 n3에 저장
+          document.getElementsByName("f3")[0].value = n3; // n3의 값을 f3에 출력시켜줌
+        } else if (x == "-") {
+          // 만약에 x의 값이 - 라면?
+          n3 = n1 - n2; // n1 - n2를 한 후 n3에 저장
+          document.getElementsByName("f3")[0].value = n3; // n3의 값을 f3에 출력시켜줌
+        }
+      }
+    </script>
+  </body>
+</html>

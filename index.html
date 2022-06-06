@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaeyeon's blog</title>
+    <style type="text/css">
+      body {
+        background-color: #e7e1e1;
+      }
+      nav ul {
+        width: 100%;
+        background-color: #8a8787;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: black;
+      }
+
+      .dropdown-content {
+        display: none;
+      }
+
+      .dropdown-menu:hover {
+        background-color: #5c5a5a;
+        color: white;
+      }
+
+      .about {
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+      }
+      .pic {
+        display: inline-block;
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 250px;
+        height: 350px;
+        background-color: white;
+      }
+
+      .pic_pororo {
+        margin-left: 65px;
+        margin-top: 30px;
+        border-radius: 50%;
+      }
+      .name {
+        margin-left: 60px;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #454343;
+      }
+      div span div {
+        width: 150px;
+        font-size: 13px;
+        margin-left: 55px;
+        margin-top: 30px;
+        border-bottom: 1px solid black;
+      }
+      .all {
+        display: flex;
+        justify-content: space-around;
+        /* width: 700px; */
+        width: 100%;
+      }
+      .education {
+        width: 150px;
+        height: 100px;
+        margin-top: 30px;
+      }
+
+      div div p {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <div class="dropdown-menu" onclick="location.href='calculator.html'">
+            계산기
+          </div>
+        </li>
+        <li class="dropdown">
+          <div class="dropdown-menu" onclick="location.href='real_blog.html'">
+            회원가입
+          </div>
+        </li>
+        <li class="dropdown">
+          <div
+            class="dropdown-menu"
+            onclick="location.href='radius_register.html';"
+          >
+            로그인
+          </div>
+        </li>
+        <li class="dropdown">
+          <div class="dropdown-menu" onclick="location.href='camera.html';">
+            카메라
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <br />
+    <div class="about">ABOUT</div>
+    <div class="all">
+      <div class="pic">
+        <img class="pic_pororo" src="Pororo.jpg" width="100" height="100" />
+        <span class="name">Shin Chae Yeon</span>
+        <span class="des">
+          <div class="phone">전화 : 010-1234-5678</div>
+          <div class="email">이메일 : ha@naver.com</div>
+          <div class="school">학교 : 부경대학교</div>
+        </span>
+      </div>
+      <div class="one_block">
+        <div class="education">
+          <p>전공</p>
+          컴퓨터공학
+        </div>
+        <div class="education">
+          <p>취미</p>
+          야구 관람
+        </div>
+        <div class="education">
+          <p>블로그 링크</p>
+          <a href="https://blog.naver.com/">Chaeyeon's blog</a>
+        </div>
+      </div>
+      <div class="two_block">
+        <div class="education">
+          <p>관심있는 분야</p>
+          프론트엔드
+        </div>
+        <div class="education">
+          <p>사는 곳</p>
+          부산
+        </div>
+        <div class="education">
+          <p>인스타 아이디</p>
+          chaeyeon_
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
